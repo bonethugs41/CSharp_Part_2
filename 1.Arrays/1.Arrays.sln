@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Two_arrays", "02.Two_arr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Lexicographically", "03.Lexicographically\03.Lexicographically.csproj", "{8FDD3109-A52D-4646-93A2-7A536B6BEA83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Maximal_sequence", "04.Maximal_sequence\04.Maximal_sequence.csproj", "{F698A1D1-46BD-436D-8E63-C700F92FE6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Increasing_sequence", "05.Increasing_sequence\05.Increasing_sequence.csproj", "{C2E6FA30-EB67-4C0C-B9B5-3A9E1FF4CE62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8FDD3109-A52D-4646-93A2-7A536B6BEA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FDD3109-A52D-4646-93A2-7A536B6BEA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FDD3109-A52D-4646-93A2-7A536B6BEA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F698A1D1-46BD-436D-8E63-C700F92FE6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F698A1D1-46BD-436D-8E63-C700F92FE6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F698A1D1-46BD-436D-8E63-C700F92FE6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F698A1D1-46BD-436D-8E63-C700F92FE6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E6FA30-EB67-4C0C-B9B5-3A9E1FF4CE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E6FA30-EB67-4C0C-B9B5-3A9E1FF4CE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E6FA30-EB67-4C0C-B9B5-3A9E1FF4CE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E6FA30-EB67-4C0C-B9B5-3A9E1FF4CE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
