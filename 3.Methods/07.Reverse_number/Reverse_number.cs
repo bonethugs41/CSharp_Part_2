@@ -6,7 +6,7 @@ using System;
 
 class ReverseNumber
 {
-    static int DecimalCheck(string check)                                       //Check if the input information is decimal
+    static int IntegerCheck(string check)                                       //Check if the input information is a valid integer
     {
         while (true)
         {
@@ -40,7 +40,7 @@ class ReverseNumber
     static void Main()
     {
         Console.Write("Input an integer:");
-        int number = DecimalCheck(Console.ReadLine());
+        int number = IntegerCheck(Console.ReadLine());
         int reversedNumber = PrintReversedDigit(number);
         Console.WriteLine("The reversed number is: {0}", reversedNumber);
     }
