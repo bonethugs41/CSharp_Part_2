@@ -2,39 +2,41 @@
 
 class BinaryDecimal
 {
-    static int IntegerCheck(string check)                                       //Check if the input information is integer
+    static void StringToArray(string biNumber, byte[] arrayOfBits)
     {
-        while (true)
+        for (int bit = 0; bit < arrayOfBits.Length; bit++)
         {
-            int integer;
-            bool result = int.TryParse(check, out integer);
-            if (result == true)
+            if (biNumber[bit] == '0')
             {
-                return integer;
+                arrayOfBits[bit] = 0;
             }
             else
             {
-                Console.Write("Invalid integer, try again: ");
-                check = Console.ReadLine();
+                arrayOfBits[bit] = 1;
             }
         }
+        //To check if the array element are corect
+        //for (int i = 0; i < 8; i++)
+        //{
+        //    Console.Write(arrayOfBits[i] + " ");
+        //}
     }
 
-    static int Converter(string biNumber)
+    static int ConvertToDecimalNumber(byte[] array)
     {
-        int sum = 0;
         int index = 0;
         int power = 1;
-        for (int i = biNumber.Length - 1; i >= 0; i--)
+        int sum = 0;
+        for (int bit = array.Length - 1; bit >= 0; bit--)
         {
-            if (biNumber[i] == '0')
+            if (array[bit] == 0)
             {
                 index++;
                 continue;
             }
-            else if (biNumber[i] == '1')
+            else if (array[bit] == 1)
             {
-                for (int j = 0; j < index; j++)                             
+                for (int j = 0; j < index; j++)
                 {
                     power = power * 2;
                 }
@@ -43,9 +45,16 @@ class BinaryDecimal
                 index++;
                 power = 1;
             }
-
         }
-        return sum;
+        if (array[0] == 0)
+        {
+            return sum;
+        }
+        else
+        {
+            sum = sum - byte.MaxValue - 1;
+            return sum;
+        }
     }
 
     static void Printing(int result)
@@ -56,10 +65,11 @@ class BinaryDecimal
     static void Main()
     {
         Console.Title = "Binary to decimal convertor";
-        Console.Write("Enter a binary number: ");
-        int number = IntegerCheck(Console.ReadLine());
-        string biNumber = number.ToString();
-        int result = Converter(biNumber);
-        Printing(result);
+        Console.Write("Enter an 8-bit binary number: ");
+        string biNumber = Console.ReadLine();
+        byte[] arrayOfBits = new byte[8];
+        StringToArray(biNumber, arrayOfBits);
+        int decNumber = ConvertToDecimalNumber(arrayOfBits);
+        Console.WriteLine("The decimal number is: {0}", decNumber);
     }
 }
