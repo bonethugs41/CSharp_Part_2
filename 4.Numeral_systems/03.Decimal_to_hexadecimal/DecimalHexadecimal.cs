@@ -5,7 +5,6 @@ using System;
 
 class DecimalHexadecimal
 {
-    static bool isNegative = false;
     static int IntegerCheck(string check)                                       //Check if the input information is integer
     {
         while (true)
@@ -24,122 +23,172 @@ class DecimalHexadecimal
         }
     }
 
-    static void DecimalToHexConverter(int decNumber)
+    static int[] DecimalToHexadecimal(int decNumber)
     {
         int remainder;
-        byte[] array = new byte[8];
-        for (int i = 0; i < array.Length; i++)
+        int index = 0;
+        int[] arrayRemainder = new int[32];
+        for (int i = 0; i < arrayRemainder.Length; i++)
         {
             remainder = decNumber % 16;
             decNumber = decNumber / 16;
-            array[i] = (byte)remainder;
+            arrayRemainder[i] = remainder;
+            if (decNumber / 16 == 1)
+            {
+                remainder = decNumber % 16;
+                decNumber = decNumber / 16;
+                arrayRemainder[i + 1] = remainder;
+                arrayRemainder[i + 2] = decNumber;
+                index = i + 2;
+                break;
+            }
+            else if (decNumber / 16 == 0)
+            {
+                remainder = decNumber % 16;
+                arrayRemainder[i + 1] = remainder;
+                index = i + 1;
+                break;
+            }
         }
-        ReverseArray(array);
+        return arrayRemainder;
     }
 
-    static void ReverseArray(byte[] array)
+    static void ReverseArray(int[] array)
     {
-        byte temp;
-        if (isNegative == false)
-        {
+        int temp;
             for (int i = 0; i < array.Length / 2; i++)
             {
                 temp = array[i];
                 array[i] = array[array.Length - i - 1];
                 array[array.Length - i - 1] = temp;
             }
-        }
-        else
-        {
-            for (int i = 0; i < array.Length / 2; i++)
-            {
-                temp = array[i];
-                array[i] = array[array.Length - i - 1];
-                array[array.Length - i - 1] = temp;
-            }
-            array[0] = 1;
-        }
         Hexadecimal(array);
     }
 
-    static void Hexadecimal(byte[] array)
+    private static string[] Hexadecimal(int[] array)
     {
-        string[] hexArray = new string[8];
+        string[] hexArray = new string[32];
         for (int i = 0; i < hexArray.Length; i++)
         {
             switch (array[i])
             {
                 case 0:
-                    hexArray[i] = "0";
-                    break;
+                    {
+                        hexArray[i] = "0";
+                        break;
+                    }
+
                 case 1:
-                    hexArray[i] = "1";
-                    break;
+                    {
+                        hexArray[i] = "1";
+                        break;
+                    }
+
                 case 2:
-                    hexArray[i] = "2";
-                    break;
+                    {
+                        hexArray[i] = "2";
+                        break;
+                    }
                 case 3:
-                    hexArray[i] = "3";
-                    break;
+                    {
+                        hexArray[i] = "3";
+                        break;
+                    }
+
                 case 4:
-                    hexArray[i] = "4";
-                    break;
+                    {
+                        hexArray[i] = "4";
+                        break;
+                    }
+
                 case 5:
-                    hexArray[i] = "5";
-                    break;
+                    {
+                        hexArray[i] = "5";
+                        break;
+                    }
+
                 case 6:
-                    hexArray[i] = "6";
-                    break;
+                    {
+                        hexArray[i] = "6";
+                        break;
+                    }
+
                 case 7:
-                    hexArray[i] = "7";
-                    break;
+                    {
+                        hexArray[i] = "7";
+                        break;
+                    }
+
                 case 8:
-                    hexArray[i] = "8";
-                    break;
+                    {
+                        hexArray[i] = "8";
+                        break;
+                    }
+
                 case 9:
-                    hexArray[i] = "9";
-                    break;
+                    {
+                        hexArray[i] = "9";
+                        break;
+                    }
+
                 case 10:
-                    hexArray[i] = "A";
-                    break;
+                    {
+                        hexArray[i] = "A";
+                        break;
+                    }
+
                 case 11:
-                    hexArray[i] = "B";
-                    break;
+                    {
+                        hexArray[i] = "B";
+                        break;
+                    }
+
                 case 12:
-                    hexArray[i] = "C";
-                    break;
+                    {
+                        hexArray[i] = "C";
+                        break;
+                    }
+
                 case 13:
-                    hexArray[i] = "D";
-                    break;
+                    {
+                        hexArray[i] = "D";
+                        break;
+                    }
+
                 case 14:
-                    hexArray[i] = "E";
-                    break;
+                    {
+                        hexArray[i] = "E";
+                        break;
+                    }
+
                 case 15:
-                    hexArray[i] = "F";
-                    break;
+                    {
+                        hexArray[i] = "F";
+                        break;
+                    }
+
             }
         }
-        Printing(array);
+        return hexArray;
     }
 
-    private static void Printing(byte[] array)
+    private static void Printig(string[] array)
     {
         for (int i = 0; i < array.Length; i++)
         {
             Console.Write(array[i]);
         }
+        Console.WriteLine();
     }
 
-    static void Main()
+    static void Main()                                                          //Works only with positive numbers..
     {
         Console.Title = "Decimal to Hexadecimal converter";
-        Console.Write("Input a 8-bit decimal number: ");
+        Console.Write("Input a 8-bit decimal positive number: ");
         int decNumber = IntegerCheck(Console.ReadLine());
-        //byte[] decArray = new byte[8];
-        if (decNumber < 0)
-        {
-            isNegative = true;
-        }
-        DecimalToHexConverter(decNumber);
+        int[] array = DecimalToHexadecimal(decNumber);
+        ReverseArray(array);
+        string[] hexArray = Hexadecimal(array);
+        Printig(hexArray);
     }
 }
