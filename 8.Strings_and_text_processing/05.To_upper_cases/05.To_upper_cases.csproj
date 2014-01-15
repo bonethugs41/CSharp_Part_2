@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A45A73D2-387E-400E-9057-875355452C1E}</ProjectGuid>
+    <ProjectGuid>{ECE97E82-0E92-43D4-B525-8D4CFBE2EBE4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Reverese_string</RootNamespace>
-    <AssemblyName>02.Reverese_string</AssemblyName>
+    <RootNamespace>_05.To_upper_cases</RootNamespace>
+    <AssemblyName>05.To_upper_cases</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reverese_string.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
