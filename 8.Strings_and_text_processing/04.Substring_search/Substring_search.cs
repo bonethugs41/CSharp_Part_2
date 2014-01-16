@@ -4,7 +4,7 @@
 using System;
 using System.Globalization;
 
-class Program
+class SubstringSearch
 {
     static void Main()
     {

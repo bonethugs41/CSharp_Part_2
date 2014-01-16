@@ -3,11 +3,9 @@
 //Example of incorrect expression: )(a+b)).
 
 
-
-
 using System;
 
-class Program
+class BracketsCheck
 {
     static void Main()
     {

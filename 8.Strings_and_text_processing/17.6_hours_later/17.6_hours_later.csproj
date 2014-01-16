@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECE97E82-0E92-43D4-B525-8D4CFBE2EBE4}</ProjectGuid>
+    <ProjectGuid>{5C87D595-A068-4EEE-8601-05D2853ECFC9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_05.To_upper_cases</RootNamespace>
-    <AssemblyName>05.To_upper_cases</AssemblyName>
+    <RootNamespace>_17._6_hours_later</RootNamespace>
+    <AssemblyName>17.6_hours_later</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="To_upper_cases.cs" />
+    <Compile Include="6_hours_later.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
