@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Durankulak_numbers", "04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.9GAG_numbers", "05.9GAG_numbers\05.9GAG_numbers.csproj", "{7E90C5A4-4FAA-450B-9009-0720D77621F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Genome_decoder", "06.Genome_decoder\06.Genome_decoder.csproj", "{0615CB7F-09DF-470D-97C7-D8E28EE0B8AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7E90C5A4-4FAA-450B-9009-0720D77621F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E90C5A4-4FAA-450B-9009-0720D77621F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E90C5A4-4FAA-450B-9009-0720D77621F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0615CB7F-09DF-470D-97C7-D8E28EE0B8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0615CB7F-09DF-470D-97C7-D8E28EE0B8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0615CB7F-09DF-470D-97C7-D8E28EE0B8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0615CB7F-09DF-470D-97C7-D8E28EE0B8AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
