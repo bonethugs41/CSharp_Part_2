@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+//Don't work correctly
 namespace _06.Genome_decoder
 {
     class GenomeDecoder
